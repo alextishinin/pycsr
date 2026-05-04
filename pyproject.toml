@@ -23,3 +23,8 @@ build-backend = "hatchling.build"
 
 [dependency-groups]
 dev = ["ruff>=0.14.5", "isort>=7.0.0"]
+
+[tool.uv.workspace]
+members = [
+    "csr-practice",
+]
