@@ -1,0 +1,5 @@
+{
+  "python.analysis.extraPaths": ["./csr-practice/src"],
+  "python.testing.pytestEnabled": true,
+  "python.testing.unittestEnabled": false
+}

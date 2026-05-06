@@ -22,9 +22,45 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [dependency-groups]
-dev = ["ruff>=0.14.5", "isort>=7.0.0"]
+dev = [
+    "ruff>=0.14.5",
+    "isort>=7.0.0",
+    "mypy>=1.20.2",
+    "types-tabulate>=0.10.0.20260408",
+    "pytest>=9.0.3",
+    "pytest-cov>=7.1.0",
+]
 
 [tool.uv.workspace]
 members = [
     "csr-practice",
+    "pycsr-example",
 ]
+
+[tool.ruff]
+line-length = 88
+target-version = "py313"
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.ruff.lint]
+select = [
+    "E",    # pycodestyle
+    "F",    # Pyflakes
+    "UP",   # pyupgrade
+    "B",    # flake8-bugbear
+    "SIM",  # flake8-simplify
+    "I",    # isort
+]
+ignore = []
+
+[tool.mypy]
+python_version = "3.14"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false
+disallow_incomplete_defs = true
+check_untyped_defs = true
+no_implicit_optional = true
