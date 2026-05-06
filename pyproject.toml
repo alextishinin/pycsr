@@ -35,6 +35,7 @@ dev = [
 members = [
     "csr-practice",
     "pycsr-example",
+    "dev-practice",
 ]
 
 [tool.ruff]
