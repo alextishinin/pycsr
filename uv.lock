@@ -13,6 +13,7 @@ members = [
     "disposition-shell",
     "pycsr",
     "pycsr-example",
+    "subject-disposition",
 ]
 
 [[package]]
@@ -2116,6 +2117,29 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/28/bb/59e7be0271be264b7b541baf3973f97747740950bfd5115de731f63da8ab/statsmodels-0.14.5-cp314-cp314-musllinux_1_2_x86_64.whl", hash = "sha256:557df3a870a57248df744fdfcc444ecbc5bdbf1c042b8a8b5d8e3e797830dc2a", size = 10694060, upload-time = "2025-10-30T16:33:07.656Z" },
     { url = "https://files.pythonhosted.org/packages/8b/c0/b28d0fd0347ea38d3610052f479e4b922eb33bb8790817f93cd89e6e08ba/statsmodels-0.14.5-cp314-cp314-win_amd64.whl", hash = "sha256:95af7a9c4689d514f4341478b891f867766f3da297f514b8c4adf08f4fa61d03", size = 9648961, upload-time = "2025-10-30T13:47:24.303Z" },
 ]
+
+[[package]]
+name = "subject-disposition"
+version = "0.1.0"
+source = { editable = "subject-disposition" }
+dependencies = [
+    { name = "polars" },
+    { name = "rtflite" },
+]
+
+[package.dev-dependencies]
+dev = [
+    { name = "pytest" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "polars", specifier = ">=1.35.2" },
+    { name = "rtflite", specifier = ">=1.1.1" },
+]
+
+[package.metadata.requires-dev]
+dev = [{ name = "pytest", specifier = ">=9.0.3" }]
 
 [[package]]
 name = "terminado"

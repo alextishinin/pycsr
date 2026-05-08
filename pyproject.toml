@@ -37,6 +37,7 @@ members = [
     "pycsr-example",
     "dev-practice",
     "disposition-shell",
+    "subject-disposition",
 ]
 
 [tool.ruff]
