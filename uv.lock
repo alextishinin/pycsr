@@ -10,6 +10,7 @@ resolution-markers = [
 members = [
     "csr-practice",
     "dev-practice",
+    "disposition-shell",
     "pycsr",
     "pycsr-example",
 ]
@@ -427,6 +428,29 @@ dev = [
     { name = "pytest-cov", specifier = ">=7.1.0" },
     { name = "ruff", specifier = ">=0.14.5" },
 ]
+
+[[package]]
+name = "disposition-shell"
+version = "0.1.0"
+source = { editable = "disposition-shell" }
+dependencies = [
+    { name = "polars" },
+    { name = "rtflite" },
+]
+
+[package.dev-dependencies]
+dev = [
+    { name = "pytest" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "polars", specifier = ">=1.35.2" },
+    { name = "rtflite", specifier = ">=1.1.1" },
+]
+
+[package.metadata.requires-dev]
+dev = [{ name = "pytest", specifier = ">=9.0.3" }]
 
 [[package]]
 name = "executing"
