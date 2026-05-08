@@ -9,6 +9,9 @@ dependencies = [
     "rtflite>=1.1.1",
 ]
 
+[project.scripts]
+subjdisp = "subject_disposition.subjdisp:main"
+
 [dependency-groups]
 dev = [
     "pytest>=9.0.3",

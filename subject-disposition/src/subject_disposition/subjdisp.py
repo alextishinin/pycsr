@@ -7,7 +7,6 @@ PROJECT_DIR = Path(__file__).resolve().parents[2]
 RTF_PATH = PROJECT_DIR / "rtf" / "subject_disposition_shell.rtf"
 COURIER_NEW = 9
 FONT_SIZE = 8
-
 SHELL_COLUMNS = ["row", "treatment_a", "treatment_b", "total"]
 SHELL_ROWS = [
     ("", "", "", ""),
@@ -97,6 +96,12 @@ def write_subject_disposition_shell(output_path: Path = RTF_PATH) -> Path:
             border_first="single",
             border_last="single",
         ),
+        rtf_page_header=rtf.RTFPageHeader(
+            text=["Crinetics Pharmaceuticals", "<Protocol Number>"],
+            text_font=[COURIER_NEW],
+            text_font_size=[FONT_SIZE],
+            text_justification=["r"],
+        ),
         rtf_title=rtf.RTFTitle(
             text=["Table 14.1.1.X", "Subject Disposition", "All Subjects"],
             text_font=[COURIER_NEW],
@@ -133,6 +138,20 @@ def write_subject_disposition_shell(output_path: Path = RTF_PATH) -> Path:
                     "corresponding CRF, with the same order as CRF entries."
                 ),
             ]
+        ),
+        rtf_page_footer=rtf.RTFPageFooter(
+            text=[
+                (
+                    "<footnote>\\line\\line"
+                    "Source: <source SAS code location>\\line"
+                    "\\pard\\hyphpar\\sb15\\sa15\\fi0\\li0\\ri0\\ql\\tqr\\tx12960 "
+                    "Data Extracted: YYYY-MM-DD, Data Cut: YYYY-MM-DD\\tab "
+                    "v9.X DDMMMYYYY:MM:SS"
+                ),
+            ],
+            text_font=[COURIER_NEW],
+            text_font_size=[FONT_SIZE],
+            text_justification=["l"],
         ),
     )
 
