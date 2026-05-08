@@ -93,6 +93,9 @@ def write_subject_disposition_shell(output_path: Path = RTF_PATH) -> Path:
             orientation="landscape",
             margin=[1, 1, 1, 1, 0.5, 0.5],
             nrow=38,
+            page_title="first",
+            border_first="single",
+            border_last="single",
         ),
         rtf_title=rtf.RTFTitle(
             text=["Table 14.1.1.X", "Subject Disposition", "All Subjects"],
