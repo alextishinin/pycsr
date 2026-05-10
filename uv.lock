@@ -9,6 +9,7 @@ resolution-markers = [
 [manifest]
 members = [
     "csr-practice",
+    "csr-tables",
     "dev-practice",
     "disposition-shell",
     "pycsr",
@@ -366,6 +367,29 @@ dev = [
     { name = "ruff", specifier = ">=0.14.5" },
     { name = "types-tabulate", specifier = ">=0.10.0.20260408" },
 ]
+
+[[package]]
+name = "csr-tables"
+version = "0.1.0"
+source = { editable = "csr-tables" }
+dependencies = [
+    { name = "polars" },
+    { name = "rtflite" },
+]
+
+[package.dev-dependencies]
+dev = [
+    { name = "pytest" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "polars", specifier = ">=1.35.2" },
+    { name = "rtflite", specifier = ">=1.1.1" },
+]
+
+[package.metadata.requires-dev]
+dev = [{ name = "pytest", specifier = ">=9.0.3" }]
 
 [[package]]
 name = "cycler"

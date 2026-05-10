@@ -38,6 +38,7 @@ members = [
     "dev-practice",
     "disposition-shell",
     "subject-disposition",
+    "csr-tables",
 ]
 
 [tool.ruff]
