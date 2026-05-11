@@ -111,7 +111,7 @@ def write_summary_teae_by_soc_shell(output_path: Path = RTF_PATH) -> Path:
             text=[
                 (
                     "<footnote>\\line\\line"
-                    "Source: <source SAS code location>\\line"
+                    "Source: <source python code location>\\line"
                     "\\pard\\hyphpar\\sb15\\sa15\\fi0\\li0\\ri0\\ql\\tqr\\tx12960 "
                     "Data Extracted: YYYY-MM-DD, Data Cut: YYYY-MM-DD\\tab "
                     "v9.X DDMMMYYYY:MM:SS"
